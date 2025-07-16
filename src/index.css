@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'PixelGame';
+  src: url('./assets/fonts/Pixel%20Game.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+.font-pixelgame {
+  font-family: 'PixelGame', sans-serif;
+}

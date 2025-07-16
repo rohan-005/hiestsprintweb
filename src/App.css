@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: 'PixelGame';
+  src: url('./assets/fonts/Pixel%20Game.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+.font-pixelgame {
+  font-family: 'PixelGame', sans-serif;
+}
+@font-face {
+  font-family: 'astroz';
+  src: url('./assets/fonts/Astroz%20Trial.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.font-astroz {
+  font-family: 'astroz', sans-serif;
+}
+
+
+
+    body {
+      background: linear-gradient(-45deg, #000000, #060227, #000000, #000000);
+      background-size: 400% 400%;
+      animation: gradientMove 3s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+.text-glow {
+  font-family: 'pixelgame', sans-serif;
+  font-size: 2.5rem;
+  color: #33d406;   
+  margin: 2rem;       
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* drop-shadow-lg */
+  transition: all 0.3s ease-in-out;
+}
+
+.text-glow:hover {
+  color: #44ee22; /* text-cyan-400 */
+  transform: scale(1.05);
+  text-shadow: 0 0 15px rgba(34, 238, 34, 0.8);
+}
+
+
+.anim-right{
+    animation: fadeInRight 1s ease-out forwards;
+
+}
+.anim-left{
+    animation: fadeInLeft 1s ease-out backwards;
+
+}
+
+.typing {
+  white-space: nowrap;
+  overflow: hidden;
+  /* width: fit-content; */
+  display: inline-block;
+
+  /* Typing animation */
+  animation: type 2s ease infinite alternate-reverse;
+}
+
+
+.char p,
+.char div {
+  /* color: rgb(47, 42, 42); */
+  transition: all 0.5s ease;
+  display: none;
+}
+
+.char:hover p,
+.char:hover div {
+  color: rgb(157, 145, 90);
+  transform: scale(1.05);
+  display: block;
+}
+
+
+@keyframes type {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
